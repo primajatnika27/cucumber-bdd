@@ -25,7 +25,7 @@ public class Login {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("https://admin-demo.nopcommerce.com/");
+		driver.get("https://blossomzones.com/");
 	}
 	
 	@When("^I enter Username as \"([^\"]*)\" and Password as \"([^\"]*)\" into the field$")
