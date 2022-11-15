@@ -31,16 +31,16 @@ public class Login {
 	@When("^I enter Username as \"([^\"]*)\" and Password as \"([^\"]*)\" into the field$")
 	public void I_enter_Username_as_someusername_and_Password_as_somepassword_into_the_field(String username, String password) {
 
-		driver.findElement(By.id("Email")).clear();
-		driver.findElement(By.id("Email")).sendKeys(username);
+		driver.findElement(By.cssSelector("#user_login")).clear();
+		driver.findElement(By.cssSelector("#user_login")).sendKeys(username);
 		
-		driver.findElement(By.id("Password")).clear();
-		driver.findElement(By.id("Password")).sendKeys(password);
+		driver.findElement(By.className("#user_pass")).clear();
+		driver.findElement(By.className("#user_pass")).sendKeys(password);
 	}
 	
 	@And("^I click on Login button$")
 	public void I_click_on_Login_button() {
-		driver.findElement(By.xpath("//button[contains(text(),'Log in')]")).click();
+		driver.findElement(By.cssSelector("#wp-submit")).click();
 	}
 	
 	@Then("User should be able to login based on \"([^\"]*)\" login status")
